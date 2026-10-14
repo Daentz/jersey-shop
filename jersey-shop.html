@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JerseyZone KE – Premier League Kits</title>
+<style>
+:root{color-scheme:dark;--bg:#07070d;--card:#12121f;--line:#26263a;--tx:#f4f4fb;--mut:#9a9ab5;--a:#c6ff00;--b:#00e5ff;--c:#ff2e93;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:radial-gradient(900px 500px at 85% -5%,#3a0a5c55,transparent),radial-gradient(700px 400px at 0 20%,#003a4455,transparent),var(--bg);color:var(--tx);font-family:"Segoe UI",system-ui,Arial,sans-serif;overflow-x:hidden}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:#07070dd9;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-weight:900;letter-spacing:1px;font-size:20px}.logo b{color:var(--a)}
+nav a{color:var(--mut);text-decoration:none;margin-left:18px;font-size:14px}
+.cartbtn{background:var(--a);color:#000;border:0;border-radius:99px;padding:9px 16px;font-weight:800;cursor:pointer;margin-left:18px}
+.hero{padding:7vh 5vw 4vh;text-align:center}
+.pill{display:inline-block;border:1px solid var(--a);color:var(--a);padding:6px 14px;border-radius:99px;font-size:12px;letter-spacing:2px;font-weight:700}
+h1{font-size:clamp(44px,10vw,112px);line-height:.95;margin:18px 0;font-weight:900;letter-spacing:-2px}
+h1 span{background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:600px;margin:0 auto 24px;color:var(--mut);font-size:18px}
+.cta{display:inline-block;background:linear-gradient(90deg,var(--a),var(--b));color:#000;font-weight:900;padding:15px 34px;border-radius:99px;text-decoration:none;box-shadow:0 0 40px #c6ff0055}
+.marq{overflow:hidden;border-block:1px solid var(--line);background:#0d0d18;margin:30px 0}
+.marq div{display:flex;gap:40px;width:max-content;padding:12px 0;animation:m 28s linear infinite;font-weight:800;letter-spacing:3px;color:var(--mut)}
+.marq i{color:var(--c);font-style:normal}
+@keyframes m{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marq div{animation:none}}
+section{padding:30px 5vw}h2{font-size:clamp(28px,5vw,44px);margin:0 0 6px;font-weight:900}.sub{color:var(--mut);margin:0 0 22px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;position:relative}
+.tier.hot{border-color:var(--a);box-shadow:0 0 40px #c6ff0026}
+.tier .pr{font-size:38px;font-weight:900;color:var(--a)}.tier small{color:var(--mut)}
+.tier em{position:absolute;top:-11px;right:16px;background:var(--c);font-style:normal;font-size:11px;font-weight:800;padding:4px 10px;border-radius:99px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+input,select{background:#0d0d18;border:1px solid var(--line);color:var(--tx);border-radius:12px;padding:12px;font-size:15px;width:100%}
+.tools input{max-width:340px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:linear-gradient(160deg,#171728,#0e0e1a);border:1px solid var(--line);border-radius:22px;padding:16px;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:var(--b);box-shadow:0 14px 40px #00e5ff22}
+.card svg{width:100%;height:190px;filter:drop-shadow(0 10px 16px #000a);transition:.3s}.card:hover svg{transform:scale(1.06) rotate(-2deg)}
+.card h3{margin:8px 0 10px;font-size:17px}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
+.opts button{background:#0d0d18;border:1px solid var(--line);color:var(--mut);border-radius:10px;padding:7px 2px;font-size:12px;cursor:pointer;line-height:1.2}
+.opts button b{display:block;color:var(--tx);font-size:14px}
+.opts button.on{border-color:var(--a);background:#c6ff0018}.opts button.on b{color:var(--a)}
+.row{display:flex;gap:8px}.row select{width:72px;padding:9px}
+.add{flex:1;background:var(--a);color:#000;border:0;border-radius:12px;font-weight:800;cursor:pointer}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}.step b{font-size:30px;color:var(--c)}
+.vibes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.vibes div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}.vibes b{display:block;font-size:20px;margin-bottom:6px;color:var(--b)}.vibes p{margin:0;color:var(--mut);line-height:1.5;font-size:14px}
+.leg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.lg{border-radius:24px;border:1px solid var(--line);background:linear-gradient(160deg,var(--g),#0a0a14 70%);overflow:hidden;box-shadow:0 0 50px color-mix(in srgb,var(--g) 35%,transparent)}.ph{height:260px;display:flex;align-items:flex-end;justify-content:center}.ph svg,.ph img{height:100%;width:auto;max-width:100%;object-fit:cover}.lg div.t{padding:18px;background:#0008}.lg h3{margin:0;font-size:24px}.lg p{margin:6px 0 0;color:var(--mut);font-size:14px;line-height:1.5}
+footer{text-align:center;color:var(--mut);padding:40px 5vw 60px;font-size:13px}
+#drawer{position:fixed;inset:0;z-index:50;display:none;background:#000a}
+#drawer.open{display:block}
+.panel{position:absolute;right:0;top:0;bottom:0;width:min(440px,100%);background:#0c0c17;border-left:1px solid var(--line);padding:20px;overflow:auto;padding-top:calc(20px + env(safe-area-inset-top,0px))}
+.panel h3{margin:0 0 12px;font-size:24px}.x{float:right;background:none;border:0;color:var(--tx);font-size:28px;cursor:pointer}
+.it{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.it small{color:var(--mut);display:block}.it button{background:#1c1c30;color:var(--tx);border:0;border-radius:8px;width:26px;height:26px;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font-size:22px;font-weight:900;margin:14px 0}.tot span{color:var(--a)}
+.panel label{display:block;font-size:13px;color:var(--mut);margin:12px 0 5px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pay label{margin:0;border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;color:var(--tx);text-align:center;font-weight:700}
+.pay input{display:none}.pay label.on{border-color:var(--a);background:#c6ff0018;color:var(--a)}
+.box{background:#0d0d18;border:1px dashed var(--a);border-radius:12px;padding:14px;margin-top:12px;font-size:14px;line-height:1.6}.box b{color:var(--a);font-size:18px}
+.go{width:100%;margin-top:16px;background:linear-gradient(90deg,var(--a),var(--b));color:#000;border:0;border-radius:14px;padding:15px;font-weight:900;font-size:16px;cursor:pointer}
+.empty{color:var(--mut);padding:20px 0}
+</style></head><body>
+<nav><div class="logo">JERSEY<b>ZONE</b> KE</div><div><a href="#tiers">Prices</a><a href="#kits">Kits</a><a href="#how">How to order</a><button class="cartbtn" onclick="openCart()">🛒 <span id="cnt">0</span></button></div></nav>
+
+<header class="hero"><span class="pill">PREMIER LEAGUE KITS • DELIVERED IN KENYA</span>
+<h1>WEAR THE <span>GAME.</span></h1>
+<p>All 20 Premier League shirts. Pick your quality, pay with M-Pesa or Till, and we deliver to your door.</p>
+<a class="cta" href="#kits">SHOP JERSEYS →</a></header>
+
+<div class="marq"><div id="mq"></div></div>
+
+<section id="tiers"><h2>Pick your quality</h2><p class="sub">Same teams, three price points. Prices in Kenya Shillings.</p>
+<div class="tiers">
+<div class="tier"><small>PLAYER VERSION</small><div class="pr">KES 2,500</div><small>Premium match-quality fabric, stitched detailing.</small></div>
+<div class="tier hot"><em>BEST SELLER</em><small>FAN VERSION</small><div class="pr">KES 1,200</div><small>Great quality replica, comfortable everyday wear.</small></div>
+<div class="tier"><small>BUDGET VERSION</small><div class="pr">KES 500</div><small>Cheap and cheerful. Perfect for matchday and kids.</small></div></div></section>
+
+<section id="kits"><h2>The kits</h2><p class="sub">Tap a quality, choose size, add to cart.</p>
+<div class="tools"><input id="q" placeholder="Search a club… e.g. Arsenal"></div>
+<div class="grid" id="grid"></div></section>
+
+<section id="vibe"><h2>The feeling</h2><p class="sub">Football is more than ninety minutes.</p><div class="vibes"><div><b>The roar</b><p>Thousands of strangers become one voice. A goal lands and the whole street shakes with it.</p></div><div><b>Matchday ritual</b><p>The shirt goes on, the group chat lights up, and everyone finds a screen, a pitch or a plastic chair.</p></div><div><b>Pride you can wear</b><p>A jersey says where your heart lives. Rivals tease, friends argue, and you would not change a thing.</p></div><div><b>Every pitch is Wembley</b><p>From stadiums to dusty estate grounds, a ball and two stones for goalposts is all it takes to dream.</p></div></div></section>
+<section id="legends"><h2>The icons</h2><p class="sub">Two names. Two numbers. One unforgettable era.</p><div class="leg">
+<div class="lg" style="--g:#b3121b"><div class="ph" id="ph-ronaldo"><svg viewBox="0 0 200 240"><text x="100" y="150" text-anchor="middle" font-family="Arial" font-weight="900" font-size="150" fill="#fff" opacity=".16">7</text><circle cx="100" cy="78" r="28" fill="#0b0b14"/><path d="M40 240 Q42 118 100 112 Q158 118 160 240Z" fill="#0b0b14"/></svg></div><div class="t"><h3>Cristiano Ronaldo</h3><p>The No. 7. Relentless drive, record-breaking goals and a legacy built on hard work.</p></div></div>
+<div class="lg" style="--g:#2f86c4"><div class="ph" id="ph-messi"><svg viewBox="0 0 200 240"><text x="100" y="150" text-anchor="middle" font-family="Arial" font-weight="900" font-size="150" fill="#fff" opacity=".16">10</text><circle cx="100" cy="78" r="28" fill="#0b0b14"/><path d="M40 240 Q42 118 100 112 Q158 118 160 240Z" fill="#0b0b14"/></svg></div><div class="t"><h3>Lionel Messi</h3><p>The No. 10. Magic on the ball, effortless vision and a World Cup winner.</p></div></div>
+</div></section>
+<section id="how"><h2>How to order</h2><p class="sub">Four quick steps.</p>
+<div class="steps"><div class="step"><b>1</b><br>Pick your jersey, quality and size.</div><div class="step"><b>2</b><br>Open the cart and enter your details.</div><div class="step"><b>3</b><br>Pay by M-Pesa or Till and add the code.</div><div class="step"><b>4</b><br>Send the order to us on WhatsApp. We deliver.</div></div></section>
+
+<footer>© JerseyZone KE. Illustrations are generic kit designs for display. Club names belong to their owners.</footer>
+
+<div id="drawer" onclick="if(event.target===this)closeCart()"><div class="panel">
+<button class="x" onclick="closeCart()">×</button><h3>Your cart</h3>
+<div id="items"></div><div class="tot">Total <span id="tot">KES 0</span></div>
+<label>Full name</label><input id="nm" placeholder="Your name">
+<label>Phone number</label><input id="ph" placeholder="07XX XXX XXX" inputmode="tel">
+<label>Delivery location</label><input id="loc" placeholder="Town / estate / pickup point">
+<label>Payment method</label>
+<div class="pay"><label class="on" id="l1"><input type="radio" name="pm" value="mpesa" checked>M-Pesa</label><label id="l2"><input type="radio" name="pm" value="till">Till Number</label></div>
+<div class="box" id="pbox"></div>
+<label>M-Pesa confirmation code</label><input id="code" placeholder="e.g. SHK4X8ABCD">
+<button class="go" onclick="place()">PLACE ORDER ON WHATSAPP</button></div></div>
+
+<script>
+/* ===== EDIT THESE LATER ===== */
+const CFG={shop:"JerseyZone KE",whatsapp:"254700000000",mpesaNumber:"07XX XXX XXX",mpesaName:"YOUR NAME HERE",till:"000000",tillName:"YOUR BUSINESS NAME"};
+/* ============================ */
+const TIERS=[{n:"Player",p:2500},{n:"Fan",p:1200},{n:"Budget",p:500}];
+// name, base, accent, style, text
+const T=[["Arsenal","#EF0107","#fff","sl","#fff"],["Aston Villa","#670E36","#95BFE5","sl","#95BFE5"],["Bournemouth","#DA291C","#111","st","#fff"],["Brentford","#E30613","#fff","st","#fff"],["Brighton","#0057B8","#fff","st","#fff"],["Burnley","#6C1D45","#99D6EA","sl","#99D6EA"],["Chelsea","#034694","#fff","so","#fff"],["Crystal Palace","#1B458F","#C4122E","st","#fff"],["Everton","#003399","#fff","so","#fff"],["Fulham","#fff","#111","so","#111"],["Leeds United","#fff","#1D428A","so","#1D428A"],["Liverpool","#C8102E","#F6EB61","so","#fff"],["Man City","#6CABDD","#fff","so","#1C2C5B"],["Man United","#DA291C","#111","sl","#fff"],["Newcastle","#fff","#111","st","#111"],["Nott'm Forest","#DD0000","#fff","so","#fff"],["Sunderland","#EB172B","#fff","st","#fff"],["Spurs","#fff","#132257","so","#132257"],["West Ham","#7A263A","#1BB1E7","sl","#1BB1E7"],["Wolves","#FDB913","#111","so","#111"]];
+const B="M60 15 L20 40 L5 92 L42 102 L46 86 L46 205 Q100 216 154 205 L154 86 L158 102 L195 92 L180 40 L140 15 Q100 42 60 15Z";
+function jersey(t,i){const [,b,a,s,tx]=t;let d="";
+ if(s=="st")for(let k=0;k<8;k++)d+=`<rect x="${k*25+12}" y="0" width="12.5" height="230" fill="${a}"/>`;
+ if(s=="sl")d+=`<rect x="0" y="0" width="47" height="120" fill="${a}"/><rect x="153" y="0" width="50" height="120" fill="${a}"/>`;
+ if(s=="so")d+=`<rect x="0" y="86" width="47" height="14" fill="${a}"/><rect x="153" y="86" width="50" height="14" fill="${a}"/>`;
+ return `<svg viewBox="0 0 200 225"><defs><clipPath id="c${i}"><path d="${B}"/></clipPath><linearGradient id="g${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></linearGradient></defs>
+ <g clip-path="url(#c${i})"><rect width="200" height="230" fill="${b}"/>${d}<rect width="200" height="230" fill="url(#g${i})"/></g>
+ <path d="${B}" fill="none" stroke="#0006" stroke-width="1.5"/>
+ <path d="M60 15 Q100 42 140 15 L132 11 Q100 30 68 11Z" fill="${a==b?'#111':a}" stroke="#0004"/>
+ <text x="100" y="95" text-anchor="middle" font-family="Arial" font-weight="900" font-size="26" fill="${tx}" opacity=".9">KE</text>
+ <text x="100" y="150" text-anchor="middle" font-family="Arial" font-weight="900" font-size="54" fill="${tx}" opacity=".18">${(i%11)+1}</text></svg>`}
+let cart=[];const fmt=n=>"KES "+n.toLocaleString("en-KE");
+function draw(f=""){const g=document.getElementById("grid");
+ g.innerHTML=T.map((t,i)=>t[0].toLowerCase().includes(f)?`<div class="card" data-i="${i}" data-t="1">${jersey(t,i)}<h3>${t[0]}</h3>
+ <div class="opts">${TIERS.map((x,k)=>`<button data-k="${k}" class="${k==1?'on':''}">${x.n}<b>${x.p.toLocaleString()}</b></button>`).join("")}</div>
+ <div class="row"><select>${["S","M","L","XL","XXL"].map(s=>`<option ${s=="L"?"selected":""}>${s}</option>`).join("")}</select><button class="add">Add to cart</button></div></div>`:"").join("")||'<p class="empty">No club found.</p>'}
+document.getElementById("mq").innerHTML=Array(2).fill(T.map(t=>t[0].toUpperCase()+" <i>●</i>").join(" ")).join(" ");
+draw();document.getElementById("q").oninput=e=>draw(e.target.value.trim().toLowerCase());
+document.getElementById("grid").onclick=e=>{const c=e.target.closest(".card");if(!c)return;
+ const ob=e.target.closest(".opts button");if(ob){c.querySelectorAll(".opts button").forEach(x=>x.classList.remove("on"));ob.classList.add("on");return}
+ if(e.target.classList.contains("add")){const i=+c.dataset.i,k=+c.querySelector(".opts .on").dataset.k,s=c.querySelector("select").value;
+  const key=i+"-"+k+"-"+s,f=cart.find(x=>x.key==key);f?f.q++:cart.push({key,team:T[i][0],tier:TIERS[k],size:s,q:1});upd();
+  e.target.textContent="Added ✓";setTimeout(()=>e.target.textContent="Add to cart",900)}};
+function upd(){const tot=cart.reduce((a,x)=>a+x.q*x.tier.p,0);
+ document.getElementById("cnt").textContent=cart.reduce((a,x)=>a+x.q,0);document.getElementById("tot").textContent=fmt(tot);
+ document.getElementById("items").innerHTML=cart.length?cart.map(x=>`<div class="it"><div>${x.team}<small>${x.tier.n} version · ${x.size} · ${fmt(x.tier.p)}</small></div><div><button onclick="chg('${x.key}',-1)">−</button> ${x.q} <button onclick="chg('${x.key}',1)">+</button></div></div>`).join(""):'<div class="empty">Your cart is empty.</div>';pay()}
+function chg(k,d){const x=cart.find(z=>z.key==k);x.q+=d;if(x.q<1)cart=cart.filter(z=>z!=x);upd()}
+function pm(){return document.querySelector('input[name=pm]:checked').value}
+function pay(){const m=pm()=="mpesa";document.getElementById("l1").classList.toggle("on",m);document.getElementById("l2").classList.toggle("on",!m);
+ const tot=fmt(cart.reduce((a,x)=>a+x.q*x.tier.p,0));
+ document.getElementById("pbox").innerHTML=m?`Open M-Pesa → <b>Send Money</b><br>Number: <b>${CFG.mpesaNumber}</b><br>Name: ${CFG.mpesaName}<br>Amount: <b>${tot}</b>`:`Open M-Pesa → <b>Lipa na M-Pesa → Buy Goods</b><br>Till No: <b>${CFG.till}</b><br>Name: ${CFG.tillName}<br>Amount: <b>${tot}</b>`}
+document.querySelectorAll('input[name=pm]').forEach(r=>r.onchange=pay);
+function openCart(){document.getElementById("drawer").classList.add("open");upd()}
+function closeCart(){document.getElementById("drawer").classList.remove("open")}
+function place(){const n=nm.value.trim(),p=ph.value.trim(),l=loc.value.trim();
+ if(!cart.length)return alert("Your cart is empty.");if(!n||!p||!l)return alert("Please fill in name, phone and delivery location.");
+ const tot=cart.reduce((a,x)=>a+x.q*x.tier.p,0);
+ const msg=`*NEW ORDER – ${CFG.shop}*\n`+cart.map(x=>`• ${x.q} x ${x.team} (${x.tier.n}, ${x.size}) = ${fmt(x.q*x.tier.p)}`).join("\n")+`\n\n*Total:* ${fmt(tot)}\n*Name:* ${n}\n*Phone:* ${p}\n*Location:* ${l}\n*Payment:* ${pm()=="mpesa"?"M-Pesa "+CFG.mpesaNumber:"Till "+CFG.till}\n*Code:* ${code.value.trim()||"to follow"}`;
+ window.open("https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(msg),"_blank")}
+/* Add your own licensed photos here, e.g. ronaldo:"images/ronaldo.jpg" (works when the file is hosted with the images) */
+const LP={ronaldo:"",messi:""};
+for(const k in LP)if(LP[k])document.getElementById("ph-"+k).innerHTML='<img src="'+LP[k]+'" alt="">';
+upd();
+</script></body></html>
