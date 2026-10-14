@@ -39,7 +39,7 @@ input,select{background:#0d0d18;border:1px solid var(--line);color:var(--tx);bor
 .opts button{background:#0d0d18;border:1px solid var(--line);color:var(--mut);border-radius:10px;padding:7px 2px;font-size:12px;cursor:pointer;line-height:1.2}
 .opts button b{display:block;color:var(--tx);font-size:14px}
 .opts button.on{border-color:var(--a);background:#c6ff0018}.opts button.on b{color:var(--a)}
-.row{display:flex;gap:8px}.row select{width:72px;padding:9px}
+.row{display:flex;gap:8px}.row select{width:105px;padding:9px}
 .add{flex:1;background:var(--a);color:#000;border:0;border-radius:12px;font-weight:800;cursor:pointer}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 .step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}.step b{font-size:30px;color:var(--c)}
@@ -60,13 +60,18 @@ footer{text-align:center;color:var(--mut);padding:40px 5vw 60px;font-size:13px}
 .box{background:#0d0d18;border:1px dashed var(--a);border-radius:12px;padding:14px;margin-top:12px;font-size:14px;line-height:1.6}.box b{color:var(--a);font-size:18px}
 .go{width:100%;margin-top:16px;background:linear-gradient(90deg,var(--a),var(--b));color:#000;border:0;border-radius:14px;padding:15px;font-weight:900;font-size:16px;cursor:pointer}
 .empty{color:var(--mut);padding:20px 0}
+.avail{display:inline-block;margin-top:22px;background:#c6ff0014;border:1px solid var(--a);color:var(--a);padding:10px 18px;border-radius:99px;font-weight:800;font-size:14px}
+.pic{height:190px;display:flex;align-items:center;justify-content:center;border-radius:14px;overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover;transition:.3s}.card:hover .pic img{transform:scale(1.06)}
+.pic{position:relative}.pic img{position:absolute;inset:0}
+.ph0{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;border:2px dashed var(--b);border-radius:14px;color:var(--mut);padding:8px;overflow:hidden}.ph0 span{font-size:30px}.ph0 b{color:var(--tx);font-size:14px}.ph0 small{font-size:10px;word-break:break-all;color:var(--a)}.lph{background:#0b0b14}.ph{position:relative}.ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.seas{display:flex;gap:6px;margin:-2px 0 10px;flex-wrap:wrap}.seas button{background:#0d0d18;border:1px solid var(--line);color:var(--mut);border-radius:99px;padding:4px 10px;font-size:12px;cursor:pointer}.seas button.on{border-color:var(--b);color:var(--b);background:#00e5ff14}
 </style></head><body>
 <nav><div class="logo">JERSEY<b>ZONE</b> KE</div><div><a href="#tiers">Prices</a><a href="#kits">Kits</a><a href="#how">How to order</a><button class="cartbtn" onclick="openCart()">🛒 <span id="cnt">0</span></button></div></nav>
 
 <header class="hero"><span class="pill">PREMIER LEAGUE KITS • DELIVERED IN KENYA</span>
 <h1>WEAR THE <span>GAME.</span></h1>
 <p>All 20 Premier League shirts. Pick your quality, pay with M-Pesa or Till, and we deliver to your door.</p>
-<a class="cta" href="#kits">SHOP JERSEYS →</a></header>
+<a class="cta" href="#kits">SHOP JERSEYS →</a><br><div class="avail">✅ All jerseys are available. Order yours today!</div></header>
 
 <div class="marq"><div id="mq"></div></div>
 
@@ -76,14 +81,101 @@ footer{text-align:center;color:var(--mut);padding:40px 5vw 60px;font-size:13px}
 <div class="tier hot"><em>BEST SELLER</em><small>FAN VERSION</small><div class="pr">KES 1,200</div><small>Great quality replica, comfortable everyday wear.</small></div>
 <div class="tier"><small>BUDGET VERSION</small><div class="pr">KES 500</div><small>Cheap and cheerful. Perfect for matchday and kids.</small></div></div></section>
 
-<section id="kits"><h2>The kits</h2><p class="sub">Tap a quality, choose size, add to cart.</p>
+<section id="kits"><h2>The kits</h2><p class="sub">✅ All jerseys are available. Tap a quality, choose Small, Medium or Large, then add to cart.</p>
 <div class="tools"><input id="q" placeholder="Search a club… e.g. Arsenal"></div>
-<div class="grid" id="grid"></div></section>
+<div class="grid" id="grid">
+<div class="card" data-i="0" data-more="jerseys/arsenal-2024-25.jpg|jerseys/arsenal-2023-24.jpg">
+<!-- 📷 ARSENAL PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Arsenal photo</b><small></small></div><img src="jerseys/arsenal-2025-26.jpg" alt="Arsenal" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Arsenal</h3><div class="ctl"></div></div>
+<div class="card" data-i="1" data-more="jerseys/aston-villa-2024-25.jpg|jerseys/aston-villa-2023-24.jpg">
+<!-- 📷 ASTON VILLA PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Aston Villa photo</b><small></small></div><img src="jerseys/aston-villa-2025-26.jpg" alt="Aston Villa" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Aston Villa</h3><div class="ctl"></div></div>
+<div class="card" data-i="2" data-more="jerseys/bournemouth-2024-25.jpg|jerseys/bournemouth-2023-24.jpg">
+<!-- 📷 BOURNEMOUTH PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Bournemouth photo</b><small></small></div><img src="jerseys/bournemouth-2025-26.jpg" alt="Bournemouth" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Bournemouth</h3><div class="ctl"></div></div>
+<div class="card" data-i="3" data-more="jerseys/brentford-2024-25.jpg|jerseys/brentford-2023-24.jpg">
+<!-- 📷 BRENTFORD PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Brentford photo</b><small></small></div><img src="jerseys/brentford-2025-26.jpg" alt="Brentford" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Brentford</h3><div class="ctl"></div></div>
+<div class="card" data-i="4" data-more="jerseys/brighton-2024-25.jpg|jerseys/brighton-2023-24.jpg">
+<!-- 📷 BRIGHTON PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Brighton photo</b><small></small></div><img src="jerseys/brighton-2025-26.jpg" alt="Brighton" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Brighton</h3><div class="ctl"></div></div>
+<div class="card" data-i="5" data-more="jerseys/burnley-2024-25.jpg|jerseys/burnley-2023-24.jpg">
+<!-- 📷 BURNLEY PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Burnley photo</b><small></small></div><img src="jerseys/burnley-2025-26.jpg" alt="Burnley" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Burnley</h3><div class="ctl"></div></div>
+<div class="card" data-i="6" data-more="jerseys/chelsea-2024-25.jpg|jerseys/chelsea-2023-24.jpg">
+<!-- 📷 CHELSEA PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Chelsea photo</b><small></small></div><img src="jerseys/chelsea-2025-26.jpg" alt="Chelsea" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Chelsea</h3><div class="ctl"></div></div>
+<div class="card" data-i="7" data-more="jerseys/crystal-palace-2024-25.jpg|jerseys/crystal-palace-2023-24.jpg">
+<!-- 📷 CRYSTAL PALACE PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Crystal Palace photo</b><small></small></div><img src="jerseys/crystal-palace-2025-26.jpg" alt="Crystal Palace" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Crystal Palace</h3><div class="ctl"></div></div>
+<div class="card" data-i="8" data-more="jerseys/everton-2024-25.jpg|jerseys/everton-2023-24.jpg">
+<!-- 📷 EVERTON PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Everton photo</b><small></small></div><img src="jerseys/everton-2025-26.jpg" alt="Everton" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Everton</h3><div class="ctl"></div></div>
+<div class="card" data-i="9" data-more="jerseys/fulham-2024-25.jpg|jerseys/fulham-2023-24.jpg">
+<!-- 📷 FULHAM PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Fulham photo</b><small></small></div><img src="jerseys/fulham-2025-26.jpg" alt="Fulham" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Fulham</h3><div class="ctl"></div></div>
+<div class="card" data-i="10" data-more="jerseys/leeds-united-2024-25.jpg|jerseys/leeds-united-2023-24.jpg">
+<!-- 📷 LEEDS UNITED PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Leeds United photo</b><small></small></div><img src="jerseys/leeds-united-2025-26.jpg" alt="Leeds United" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Leeds United</h3><div class="ctl"></div></div>
+<div class="card" data-i="11" data-more="jerseys/liverpool-2024-25.jpg|jerseys/liverpool-2023-24.jpg">
+<!-- 📷 LIVERPOOL PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Liverpool photo</b><small></small></div><img src="jerseys/liverpool-2025-26.jpg" alt="Liverpool" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Liverpool</h3><div class="ctl"></div></div>
+<div class="card" data-i="12" data-more="jerseys/man-city-2024-25.jpg|jerseys/man-city-2023-24.jpg">
+<!-- 📷 MAN CITY PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Man City photo</b><small></small></div><img src="jerseys/man-city-2025-26.jpg" alt="Man City" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Man City</h3><div class="ctl"></div></div>
+<div class="card" data-i="13" data-more="jerseys/man-united-2024-25.jpg|jerseys/man-united-2023-24.jpg">
+<!-- 📷 MAN UNITED PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Man United photo</b><small></small></div><img src="jerseys/man-united-2025-26.jpg" alt="Man United" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Man United</h3><div class="ctl"></div></div>
+<div class="card" data-i="14" data-more="jerseys/newcastle-2024-25.jpg|jerseys/newcastle-2023-24.jpg">
+<!-- 📷 NEWCASTLE PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Newcastle photo</b><small></small></div><img src="jerseys/newcastle-2025-26.jpg" alt="Newcastle" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Newcastle</h3><div class="ctl"></div></div>
+<div class="card" data-i="15" data-more="jerseys/nott-m-forest-2024-25.jpg|jerseys/nott-m-forest-2023-24.jpg">
+<!-- 📷 NOTT'M FOREST PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Nott&#39;m Forest photo</b><small></small></div><img src="jerseys/nott-m-forest-2025-26.jpg" alt="Nott&#39;m Forest" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Nott&#39;m Forest</h3><div class="ctl"></div></div>
+<div class="card" data-i="16" data-more="jerseys/sunderland-2024-25.jpg|jerseys/sunderland-2023-24.jpg">
+<!-- 📷 SUNDERLAND PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Sunderland photo</b><small></small></div><img src="jerseys/sunderland-2025-26.jpg" alt="Sunderland" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Sunderland</h3><div class="ctl"></div></div>
+<div class="card" data-i="17" data-more="jerseys/spurs-2024-25.jpg|jerseys/spurs-2023-24.jpg">
+<!-- 📷 SPURS PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Spurs photo</b><small></small></div><img src="jerseys/spurs-2025-26.jpg" alt="Spurs" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Spurs</h3><div class="ctl"></div></div>
+<div class="card" data-i="18" data-more="jerseys/west-ham-2024-25.jpg|jerseys/west-ham-2023-24.jpg">
+<!-- 📷 WEST HAM PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add West Ham photo</b><small></small></div><img src="jerseys/west-ham-2025-26.jpg" alt="West Ham" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>West Ham</h3><div class="ctl"></div></div>
+<div class="card" data-i="19" data-more="jerseys/wolves-2024-25.jpg|jerseys/wolves-2023-24.jpg">
+<!-- 📷 WOLVES PHOTO: change the src below (season 2025/26). Seasons 2024/25 and 2023/24 are in data-more above. -->
+<div class="pic"><div class="ph0"><span>📷</span><b>Add Wolves photo</b><small></small></div><img src="jerseys/wolves-2025-26.jpg" alt="Wolves" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'"></div>
+<h3>Wolves</h3><div class="ctl"></div></div>
+</div></section>
 
 <section id="vibe"><h2>The feeling</h2><p class="sub">Football is more than ninety minutes.</p><div class="vibes"><div><b>The roar</b><p>Thousands of strangers become one voice. A goal lands and the whole street shakes with it.</p></div><div><b>Matchday ritual</b><p>The shirt goes on, the group chat lights up, and everyone finds a screen, a pitch or a plastic chair.</p></div><div><b>Pride you can wear</b><p>A jersey says where your heart lives. Rivals tease, friends argue, and you would not change a thing.</p></div><div><b>Every pitch is Wembley</b><p>From stadiums to dusty estate grounds, a ball and two stones for goalposts is all it takes to dream.</p></div></div></section>
 <section id="legends"><h2>The icons</h2><p class="sub">Two names. Two numbers. One unforgettable era.</p><div class="leg">
-<div class="lg" style="--g:#b3121b"><div class="ph" id="ph-ronaldo"><svg viewBox="0 0 200 240"><text x="100" y="150" text-anchor="middle" font-family="Arial" font-weight="900" font-size="150" fill="#fff" opacity=".16">7</text><circle cx="100" cy="78" r="28" fill="#0b0b14"/><path d="M40 240 Q42 118 100 112 Q158 118 160 240Z" fill="#0b0b14"/></svg></div><div class="t"><h3>Cristiano Ronaldo</h3><p>The No. 7. Relentless drive, record-breaking goals and a legacy built on hard work.</p></div></div>
-<div class="lg" style="--g:#2f86c4"><div class="ph" id="ph-messi"><svg viewBox="0 0 200 240"><text x="100" y="150" text-anchor="middle" font-family="Arial" font-weight="900" font-size="150" fill="#fff" opacity=".16">10</text><circle cx="100" cy="78" r="28" fill="#0b0b14"/><path d="M40 240 Q42 118 100 112 Q158 118 160 240Z" fill="#0b0b14"/></svg></div><div class="t"><h3>Lionel Messi</h3><p>The No. 10. Magic on the ball, effortless vision and a World Cup winner.</p></div></div>
+<div class="lg" style="--g:#b3121b"><div class="ph" id="ph-ronaldo">
+<!-- ✏️ RONALDO PHOTO: change the src below to your photo file -->
+<div class="ph0 lph"><span>📷</span><b>Add Ronaldo photo</b><small>legends/ronaldo.jpg</small></div>
+<img src="legends/ronaldo.jpg" alt="Cristiano Ronaldo" onerror="this.style.display='none'"></div><div class="t"><h3>Cristiano Ronaldo</h3><p>The No. 7. Relentless drive, record-breaking goals and a legacy built on hard work.</p></div></div>
+<div class="lg" style="--g:#2f86c4"><div class="ph" id="ph-messi">
+<!-- ✏️ MESSI PHOTO: change the src below to your photo file -->
+<div class="ph0 lph"><span>📷</span><b>Add Messi photo</b><small>legends/messi.jpg</small></div>
+<img src="legends/messi.jpg" alt="Lionel Messi" onerror="this.style.display='none'"></div><div class="t"><h3>Lionel Messi</h3><p>The No. 10. Magic on the ball, effortless vision and a World Cup winner.</p></div></div>
 </div></section>
 <section id="how"><h2>How to order</h2><p class="sub">Four quick steps.</p>
 <div class="steps"><div class="step"><b>1</b><br>Pick your jersey, quality and size.</div><div class="step"><b>2</b><br>Open the cart and enter your details.</div><div class="step"><b>3</b><br>Pay by M-Pesa or Till and add the code.</div><div class="step"><b>4</b><br>Send the order to us on WhatsApp. We deliver.</div></div></section>
@@ -104,7 +196,16 @@ footer{text-align:center;color:var(--mut);padding:40px 5vw 60px;font-size:13px}
 
 <script>
 /* ===== EDIT THESE LATER ===== */
-const CFG={shop:"JerseyZone KE",whatsapp:"254700000000",mpesaNumber:"07XX XXX XXX",mpesaName:"YOUR NAME HERE",till:"000000",tillName:"YOUR BUSINESS NAME"};
+const CFG={shop:"JerseyZone KE",whatsapp:"254708850088",mpesaNumber:"0708850088",mpesaName:"Dan Moses",till:"4245990",tillName:"Dan's Jersey Shop"};
+/* ===== JERSEY PHOTOS (edit here) =====
+   1) Put your photos in a folder called "jerseys" next to this file.
+   2) Name each photo club + season, lowercase with dashes. Example: jerseys/arsenal-2025-26.jpg, jerseys/man-united-2024-25.jpg
+   3) Add or change seasons in SEASONS. Every jersey card gets a button for each season.
+   A photo that is not found shows a placeholder with the exact file name to use. */
+const SEASONS=["2025/26","2024/25","2023/24"];
+/* Jersey photos: edit the <img src> inside each club card in the HTML (section "The kits"). Seasons 2 and 3 go in data-more="file2|file3" on the same card. */
+/* Ronaldo and Messi photos: edit the <img src> in the "The icons" section of the HTML */
+const SHOW_PLACEHOLDERS=true; /* set to false to show the drawn jerseys instead of placeholders */
 /* ============================ */
 const TIERS=[{n:"Player",p:2500},{n:"Fan",p:1200},{n:"Budget",p:500}];
 // name, base, accent, style, text
@@ -120,21 +221,25 @@ function jersey(t,i){const [,b,a,s,tx]=t;let d="";
  <path d="M60 15 Q100 42 140 15 L132 11 Q100 30 68 11Z" fill="${a==b?'#111':a}" stroke="#0004"/>
  <text x="100" y="95" text-anchor="middle" font-family="Arial" font-weight="900" font-size="26" fill="${tx}" opacity=".9">KE</text>
  <text x="100" y="150" text-anchor="middle" font-family="Arial" font-weight="900" font-size="54" fill="${tx}" opacity=".18">${(i%11)+1}</text></svg>`}
+const slug=n=>n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const chips=()=>`<div class="seas">${SEASONS.map((x,k)=>`<button data-k="${k}" data-s="${x}" class="${k?'':'on'}">${x}</button>`).join("")}</div>`;
 let cart=[];const fmt=n=>"KES "+n.toLocaleString("en-KE");
-function draw(f=""){const g=document.getElementById("grid");
- g.innerHTML=T.map((t,i)=>t[0].toLowerCase().includes(f)?`<div class="card" data-i="${i}" data-t="1">${jersey(t,i)}<h3>${t[0]}</h3>
- <div class="opts">${TIERS.map((x,k)=>`<button data-k="${k}" class="${k==1?'on':''}">${x.n}<b>${x.p.toLocaleString()}</b></button>`).join("")}</div>
- <div class="row"><select>${["S","M","L","XL","XXL"].map(s=>`<option ${s=="L"?"selected":""}>${s}</option>`).join("")}</select><button class="add">Add to cart</button></div></div>`:"").join("")||'<p class="empty">No club found.</p>'}
+function draw(){document.querySelectorAll("#grid .card").forEach(c=>{const i=+c.dataset.i,im=c.querySelector(".pic img"),p0=c.querySelector(".ph0");
+ c._p=[im.getAttribute("src"),...(c.dataset.more||"").split("|").filter(Boolean)];c.dataset.season=SEASONS[0];
+ if(SHOW_PLACEHOLDERS)p0.querySelector("small").textContent=c._p[0];else{p0.style.border="0";p0.innerHTML=jersey(T[i],i)}
+ c.querySelector(".ctl").innerHTML=chips()+`<div class="opts">${TIERS.map((x,k)=>`<button data-k="${k}" class="${k==1?'on':''}">${x.n}<b>${x.p.toLocaleString()}</b></button>`).join("")}</div>
+ <div class="row"><select>${["Small","Medium","Large"].map(s=>`<option ${s=="Medium"?"selected":""}>${s}</option>`).join("")}</select><button class="add">Add to cart</button></div>`})}
 document.getElementById("mq").innerHTML=Array(2).fill(T.map(t=>t[0].toUpperCase()+" <i>●</i>").join(" ")).join(" ");
-draw();document.getElementById("q").oninput=e=>draw(e.target.value.trim().toLowerCase());
+draw();document.getElementById("q").oninput=e=>{const f=e.target.value.trim().toLowerCase();document.querySelectorAll("#grid .card").forEach(c=>c.style.display=c.querySelector("h3").textContent.toLowerCase().includes(f)?"":"none")};
 document.getElementById("grid").onclick=e=>{const c=e.target.closest(".card");if(!c)return;
+ const sb=e.target.closest(".seas button");if(sb){c.querySelectorAll(".seas button").forEach(x=>x.classList.remove("on"));sb.classList.add("on");const s=sb.dataset.s,i=+c.dataset.i,f=c._p[+sb.dataset.k]||"";c.dataset.season=s;const im=c.querySelector(".pic img"),sm=c.querySelector(".ph0 small");if(sm)sm.textContent=f;if(im.getAttribute("src")!==f){im.style.display="none";im.src=f}return}
  const ob=e.target.closest(".opts button");if(ob){c.querySelectorAll(".opts button").forEach(x=>x.classList.remove("on"));ob.classList.add("on");return}
  if(e.target.classList.contains("add")){const i=+c.dataset.i,k=+c.querySelector(".opts .on").dataset.k,s=c.querySelector("select").value;
-  const key=i+"-"+k+"-"+s,f=cart.find(x=>x.key==key);f?f.q++:cart.push({key,team:T[i][0],tier:TIERS[k],size:s,q:1});upd();
+  const se=c.dataset.season,key=i+"-"+k+"-"+s+"-"+se,f=cart.find(x=>x.key==key);f?f.q++:cart.push({key,team:T[i][0],season:se,tier:TIERS[k],size:s,q:1});upd();
   e.target.textContent="Added ✓";setTimeout(()=>e.target.textContent="Add to cart",900)}};
 function upd(){const tot=cart.reduce((a,x)=>a+x.q*x.tier.p,0);
  document.getElementById("cnt").textContent=cart.reduce((a,x)=>a+x.q,0);document.getElementById("tot").textContent=fmt(tot);
- document.getElementById("items").innerHTML=cart.length?cart.map(x=>`<div class="it"><div>${x.team}<small>${x.tier.n} version · ${x.size} · ${fmt(x.tier.p)}</small></div><div><button onclick="chg('${x.key}',-1)">−</button> ${x.q} <button onclick="chg('${x.key}',1)">+</button></div></div>`).join(""):'<div class="empty">Your cart is empty.</div>';pay()}
+ document.getElementById("items").innerHTML=cart.length?cart.map(x=>`<div class="it"><div>${x.team}<small>${x.season} · ${x.tier.n} version · ${x.size} · ${fmt(x.tier.p)}</small></div><div><button onclick="chg('${x.key}',-1)">−</button> ${x.q} <button onclick="chg('${x.key}',1)">+</button></div></div>`).join(""):'<div class="empty">Your cart is empty.</div>';pay()}
 function chg(k,d){const x=cart.find(z=>z.key==k);x.q+=d;if(x.q<1)cart=cart.filter(z=>z!=x);upd()}
 function pm(){return document.querySelector('input[name=pm]:checked').value}
 function pay(){const m=pm()=="mpesa";document.getElementById("l1").classList.toggle("on",m);document.getElementById("l2").classList.toggle("on",!m);
@@ -146,10 +251,8 @@ function closeCart(){document.getElementById("drawer").classList.remove("open")}
 function place(){const n=nm.value.trim(),p=ph.value.trim(),l=loc.value.trim();
  if(!cart.length)return alert("Your cart is empty.");if(!n||!p||!l)return alert("Please fill in name, phone and delivery location.");
  const tot=cart.reduce((a,x)=>a+x.q*x.tier.p,0);
- const msg=`*NEW ORDER – ${CFG.shop}*\n`+cart.map(x=>`• ${x.q} x ${x.team} (${x.tier.n}, ${x.size}) = ${fmt(x.q*x.tier.p)}`).join("\n")+`\n\n*Total:* ${fmt(tot)}\n*Name:* ${n}\n*Phone:* ${p}\n*Location:* ${l}\n*Payment:* ${pm()=="mpesa"?"M-Pesa "+CFG.mpesaNumber:"Till "+CFG.till}\n*Code:* ${code.value.trim()||"to follow"}`;
+ const msg=`*NEW ORDER – ${CFG.shop}*\n`+cart.map(x=>`• ${x.q} x ${x.team} (${x.season}, ${x.tier.n}, ${x.size}) = ${fmt(x.q*x.tier.p)}`).join("\n")+`\n\n*Total:* ${fmt(tot)}\n*Name:* ${n}\n*Phone:* ${p}\n*Location:* ${l}\n*Payment:* ${pm()=="mpesa"?"M-Pesa "+CFG.mpesaNumber:"Till "+CFG.till}\n*Code:* ${code.value.trim()||"to follow"}`;
  window.open("https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(msg),"_blank")}
-/* Add your own licensed photos here, e.g. ronaldo:"images/ronaldo.jpg" (works when the file is hosted with the images) */
-const LP={ronaldo:"",messi:""};
-for(const k in LP)if(LP[k])document.getElementById("ph-"+k).innerHTML='<img src="'+LP[k]+'" alt="">';
+
 upd();
 </script></body></html>
